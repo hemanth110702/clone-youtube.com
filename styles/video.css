@@ -1,0 +1,115 @@
+.thumbnail {
+  width: 100%;
+}
+.video-info-grid {
+  display: grid;
+  grid-template-columns: 50px 1fr;
+}
+.profile-picture {
+  width: 36px;
+  border-radius: 50px;
+}
+.video-title {
+ margin-top: 0;
+ font-size: 14px;
+ font-weight: 500;
+ line-height: 20px;
+ margin-bottom: 10px;
+}
+.video-author,
+.video-stats {
+  color: rgb(96, 96, 96);
+  font-size: 12px;
+}
+.video-author {
+  margin-bottom: 4px;
+}
+.thumbnail-row {
+  margin-bottom: 8px;
+  position: relative;
+}
+.video-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  column-gap: 16px;
+  row-gap: 40px;
+}
+
+@media (max-width: 750px) {
+  .video-grid {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+@media (min-width: 751px) and (max-width: 999px) {
+  .video-grid {
+    grid-template-columns: 1fr 1fr 1fr;
+  }
+}
+@media (min-width: 1000px) {
+  .video-grid {
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+  }
+  .video-title {
+    font-size: 16px;
+    line-height: 24px;
+  }
+  .video-author,
+.video-stats {
+  font-size: 14px;
+}
+}
+
+.video-time {
+  background-color: black;
+  color: white;
+  position: absolute;
+  bottom: 8px;
+  right: 5px;
+  font-size: 12px;
+  font-weight: 600;
+  padding: 4px;
+  border-radius: 2px;
+}
+.channel-picture {
+  position: relative;
+}
+.channel-picture-hover {
+  background-color: white;
+  border-radius: 5px;
+  opacity: 0;
+  transition: opacity 0.15s;
+  display: grid;
+  grid-template-columns: 50px 1fr;
+  vertical-align: center;
+  position: absolute;
+  width: 200px;
+  height: 70px;
+  padding: 4px;
+  box-shadow: 0px 1px 10px rgba(0,0,0,0.25);
+  pointer-events: none;
+}
+.img-hover:hover + .channel-picture-hover {
+  opacity: 1;
+}
+
+.channel-profile-picture {
+  padding: 5px;
+}
+.channel-info {
+  display: flex;
+  flex-direction: column;
+  padding: 5px;
+}
+.channel-name {
+  font-weight: bold;
+  margin-bottom: 5px;
+}
+.channel-subscribers {
+  color: gray;
+  font-size: 14px;
+}
+.detailed-profile-picture {
+  width: 40px;
+  height: 40px;
+  border-radius: 20px;
+}
